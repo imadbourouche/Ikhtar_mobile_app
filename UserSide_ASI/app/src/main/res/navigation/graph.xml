@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.userside.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_messageVocale"
+            app:destination="@id/messageVocaleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_signalementsFragment"
+            app:destination="@id/signalementsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createSignalementFragment"
+            app:destination="@id/createSignalementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageVocaleFragment"
+        android:name="com.example.userside.MessageVocaleFragment"
+        android:label="fragment_message_vocale"
+        tools:layout="@layout/fragment_message_vocale" />
+    <fragment
+        android:id="@+id/createSignalementFragment"
+        android:name="com.example.userside.CreateSignalementFragment"
+        android:label="fragment_create_signalement"
+        tools:layout="@layout/fragment_create_signalement" />
+    <fragment
+        android:id="@+id/signalementsFragment"
+        android:name="com.example.userside.SignalementsFragment"
+        android:label="fragment_signalements"
+        tools:layout="@layout/fragment_signalements" />
+</navigation>
